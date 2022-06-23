@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:wght@900&display=swap");
+
+:root {
+  --linkColor: #ffa7c4;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Merriweather", serif, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+body,
+#__next {
+  min-height: 100vh;
+}
+
+a {
+  color: var(--linkColor);
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
