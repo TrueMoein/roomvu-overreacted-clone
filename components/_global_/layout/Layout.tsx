@@ -21,7 +21,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
 
         <main>{children}</main>
 
-        <footer>footer</footer>
+        <footer>Cloned by Moein Alizadeh for RV.</footer>
       </div>
     </div>
   );

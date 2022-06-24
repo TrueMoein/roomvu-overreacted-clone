@@ -1,7 +1,9 @@
+import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import axios from "axios";
+import { getFakeDateByPostId } from "helpers/date";
 import { splitWords } from "helpers/text";
 import { IPost } from "interfaces/post.interface";
-import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import styles from "./PostPage.module.scss";
 
 interface PostPageProps {
   post: IPost;
@@ -9,8 +11,9 @@ interface PostPageProps {
 
 const PostPage: NextPage<PostPageProps> = ({ post }) => {
   return (
-    <article>
+    <article className={styles.root}>
       <h1>{post.title}</h1>
+      <small>{getFakeDateByPostId(post.id)}</small>
 
       <p>{post.body}</p>
     </article>
