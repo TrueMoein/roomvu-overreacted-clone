@@ -5,4 +5,4 @@ export function splitWords(sentence: string, wordsCount = 8) {
   return `${words.join(" ")}${wordsCount > 5 ? "..." : ""}`;
 }
 
-export function calculateReadingTime(text) {}
+export function calculateReadingTime(text: string) {}

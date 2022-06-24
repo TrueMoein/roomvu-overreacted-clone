@@ -13,8 +13,8 @@ const ThemeSwitch: FC = () => {
         <label className="switch" htmlFor="changer">
           <input onChange={handleSwitchTheme} type="checkbox" id="changer" />
           <span className="slider round">
-            <small>🌙</small>
             <small>🌞</small>
+            <small>🌙</small>
           </span>
         </label>
       </div>
