@@ -1,7 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:wght@900&display=swap");
 
-:root {
-  --linkColor: #ffa7c4;
+body.dark {
+  --bg: #282c35;
+  --bg-secondary: #363c48;
+  --header: #fff;
+  --textNormal: hsla(0, 0%, 100%, 0.88);
+  --textTitle: #fff;
+  --textLink: var(--pink);
+}
+
+body.light {
+  --bg: #fff;
+  --bg-secondary: #f9fafb;
+  --header: var(--pink);
+  --textNormal: #222;
+  --textTitle: #222;
+  --textLink: #d23669;
+}
+
+body {
+  --pink: #ffa7c4;
+  background-color: var(--bg);
+  color: var(--textNormal);
+  transition: all 0.3s;
 }
 
 html,
@@ -26,7 +47,7 @@ body,
 }
 
 a {
-  color: var(--linkColor);
+  color: var(--textLink);
   text-decoration: none;
 }
 

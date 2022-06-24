@@ -1,11 +1,12 @@
 import Head from "next/head";
+import { FC } from "react";
 
 export interface SeoProps {
   title: string;
   description: string;
 }
 
-function SEO({ title, description }: SeoProps) {
+const SEO: FC<SeoProps> = ({ title, description }) => {
   return (
     <Head>
       <title>{`CoolReacted — ${title || "---"}`}</title>
@@ -13,6 +14,6 @@ function SEO({ title, description }: SeoProps) {
       <link rel="icon" href="/favicon.ico" />
     </Head>
   );
-}
+};
 
 export default SEO;

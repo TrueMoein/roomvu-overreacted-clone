@@ -3,7 +3,6 @@ import { IPost } from "interfaces/post.interface";
 import Link from "next/link";
 import { splitWords } from "helpers/text";
 import styles from "./Post.module.scss";
-import dayjs from "dayjs";
 import { getFakeDateByPostId } from "helpers/date";
 
 interface PostProps {

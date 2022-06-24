@@ -1,6 +1,4 @@
 .root {
-  background-color: #282c35;
-  color: white;
   min-height: 100vh;
 
   .content {
@@ -17,7 +15,7 @@
         margin-top: 0;
         font-weight: 900;
         a {
-          color: white;
+          color: var(--textTitle);
         }
       }
     }
