@@ -2,15 +2,13 @@ import "../assets/styles/globals.css";
 import type { AppProps } from "next/app";
 import SEO from "components/_global_/SEO";
 import Layout from "components/_global_/layout";
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
+import { Provider } from "react-redux";
+import { store } from "store/store";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  useEffect(() => {
-    document.body.classList.add("dark");
-  });
-
   return (
-    <>
+    <Provider store={store}>
       <SEO
         title={pageProps.seo?.title}
         description={pageProps.seo?.description}
@@ -18,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    </>
+    </Provider>
   );
 }
 

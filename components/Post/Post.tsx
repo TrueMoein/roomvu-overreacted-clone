@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { IPost } from "interfaces/post.interface";
 import Link from "next/link";
-import { splitWords } from "helpers/text";
+import { calculateReadingTime, splitWords } from "helpers/text";
 import styles from "./Post.module.scss";
 import { getFakeDateByPostId } from "helpers/date";
 
@@ -17,7 +17,9 @@ const Post: FC<PostProps> = ({ post }) => {
           <a>{splitWords(post.title, 5)}</a>
         </Link>
       </h3>
-      <small>{getFakeDateByPostId(post.id)}</small>
+      <small>
+        {getFakeDateByPostId(post.id)} . {calculateReadingTime(post.body)}
+      </small>
       <p>{splitWords(post.body, 10)}</p>
     </article>
   );
